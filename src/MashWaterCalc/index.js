@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
-import { Input, TextField, MenuItem } from '@mui/material';
+import { Input, TextField, MenuItem, Button } from '@mui/material';
 
 
 
 function MashWaterCalc() {
     const [grainMass, setGrainMass] = useState(null);
     const [waterToGrist, setWaterToGrist] = useState(null);
-    const [mashTunDeadSpace, setMashTunDeadSpace] = useState(0);
-    const [mashWaterAmount, setMashWaterAmount] = useState(0);
+    const [mashTunDeadSpace, setMashTunDeadSpace] = useState(null);
+    const [mashWaterAmount, setMashWaterAmount] = useState(null);
 
     
     useEffect(() => {
@@ -30,7 +30,8 @@ function MashWaterCalc() {
         //     setRestaurantId(params.restaurantId)
         // }
         // fetchData();
-    },[]);
+        console.log(grainMass, waterToGrist, mashTunDeadSpace)
+    },[grainMass, waterToGrist, mashTunDeadSpace]);
 
     return(
         <div className='App0'>
@@ -38,7 +39,7 @@ function MashWaterCalc() {
             <TextField
                 className="w-full bg-white mb-12"
                 label="Grain Amount (kg)"
-                id="type"
+                id="grain-amount"
                 name="GrainAmount"
                 variant="outlined"
                 value={grainMass || ''}
@@ -51,6 +52,51 @@ function MashWaterCalc() {
                 }}
             >
             </TextField>
+            <TextField
+                className="w-full bg-white mb-12"
+                label="Water-To-Grist Ratio (L/kg)"
+                id="water-to-grist"
+                name="WaterToGrist"
+                variant="outlined"
+                value={waterToGrist || ''}
+                onChange={(e) => setWaterToGrist(e.target.value)}
+                margin="dense"
+                InputLabelProps={{
+                    style: {
+                        textShadow: '0px 0px 4px white'
+                    }
+                }}
+            >
+            </TextField>
+            <TextField
+                className="w-full bg-white mb-12"
+                label="Mash Tun Dead Space (L)"
+                id="dead-space"
+                name="DeadSpace"
+                variant="outlined"
+                value={mashTunDeadSpace || ''}
+                onChange={(e) => setMashTunDeadSpace(e.target.value)}
+                margin="dense"
+                InputLabelProps={{
+                    style: {
+                        textShadow: '0px 0px 4px white'
+                    }
+                }}
+            >
+            </TextField>
+
+            <Button
+                variant="outlined"
+                onClick={() => {
+                    let mw = ((grainMass*waterToGrist) + parseInt(mashTunDeadSpace)).toFixed(2);
+                    console.log(typeof mw)
+                    setMashWaterAmount(mw)
+                }}
+            >
+                Calculate Mash Water
+            </Button>
+
+            <p>Mash Water Amount: {mashWaterAmount ? `${mashWaterAmount} L` : null}</p>
         </div>
     )
     
