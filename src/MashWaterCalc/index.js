@@ -3,11 +3,9 @@ import { Input, TextField, MenuItem, Button } from '@mui/material';
 
 
 
-function MashWaterCalc() {
-    const [grainMass, setGrainMass] = useState(null);
+function MashWaterCalc({grainMass, setGrainMass, mashWaterAmount, setMashWaterAmount, mashTunDeadSpace, setMashTunDeadSpace}) {
     const [waterToGrist, setWaterToGrist] = useState(null);
-    const [mashTunDeadSpace, setMashTunDeadSpace] = useState(null);
-    const [mashWaterAmount, setMashWaterAmount] = useState(null);
+    //const [mashWaterAmount, setMashWaterAmount] = useState(null);
 
     
     useEffect(() => {
