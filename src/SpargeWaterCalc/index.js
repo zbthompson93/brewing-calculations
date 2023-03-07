@@ -35,7 +35,7 @@ function SpargeWaterCalc({grainMass, mashWaterAmount, mashTunDeadSpace, spargeWa
             <Button
                 variant="outlined"
                 onClick={() => {
-                    let sw = (parseFloat(boilWaterAmount) - parseFloat(mashWaterAmount) + parseFloat(grainMass) + parseFLoat(mashTunDeadSpace)).toFixed(2);
+                    let sw = (parseFloat(boilWaterAmount) - parseFloat(mashWaterAmount) + parseFloat(grainMass) + parseFloat(mashTunDeadSpace)).toFixed(2);
                     console.log(typeof sw)
                     setSpargeWaterAmount(sw)
                 }}
