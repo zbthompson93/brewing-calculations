@@ -86,7 +86,7 @@ function MashWaterCalc({grainMass, setGrainMass, mashWaterAmount, setMashWaterAm
             <Button
                 variant="outlined"
                 onClick={() => {
-                    let mw = ((grainMass*waterToGrist) + parseInt(mashTunDeadSpace)).toFixed(2);
+                    let mw = ((grainMass*waterToGrist) + parseFloat(mashTunDeadSpace)).toFixed(2);
                     console.log(typeof mw)
                     setMashWaterAmount(mw)
                 }}
