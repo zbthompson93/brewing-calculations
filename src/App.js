@@ -21,7 +21,7 @@ function App() {
     console.log(typeof mw)
     setMashWaterAmount(mw)
 
-    let bw = parseFloat(batchSize) + parseFloat(boilOffRate) + parseFloat(trubLoss);
+    let bw = (parseFloat(batchSize)*(1.04)) + parseFloat(boilOffRate) + parseFloat(trubLoss);
     setBoilWaterAmount(bw)
 
     let sw = (parseFloat(bw) - parseFloat(mw) + parseFloat(grainMass) + parseFloat(mashTunDeadSpace)).toFixed(2);
