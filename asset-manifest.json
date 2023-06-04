@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/brewing-calculations/static/css/main.f7091732.css",
-    "main.js": "/brewing-calculations/static/js/main.131dee01.js",
+    "main.js": "/brewing-calculations/static/js/main.dcbcb64d.js",
     "static/js/787.b104d3d3.chunk.js": "/brewing-calculations/static/js/787.b104d3d3.chunk.js",
     "index.html": "/brewing-calculations/index.html",
     "main.f7091732.css.map": "/brewing-calculations/static/css/main.f7091732.css.map",
-    "main.131dee01.js.map": "/brewing-calculations/static/js/main.131dee01.js.map",
+    "main.dcbcb64d.js.map": "/brewing-calculations/static/js/main.dcbcb64d.js.map",
     "787.b104d3d3.chunk.js.map": "/brewing-calculations/static/js/787.b104d3d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7091732.css",
-    "static/js/main.131dee01.js"
+    "static/js/main.dcbcb64d.js"
   ]
 }
