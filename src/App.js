@@ -28,7 +28,7 @@ function App() {
     console.log(typeof sw)
     setSpargeWaterAmount(sw)
 
-    let swt = (((parseFloat(0.4)/parseFloat(3.08))* (parseFloat(mashTemp) - parseInt(roomTemp))) + parseFloat(mashTemp) + 2).toFixed(2);
+    let swt = (((parseFloat(0.4)/parseFloat(3.08))* (parseFloat(mashTemp) - parseInt(roomTemp))) + parseFloat(mashTemp)).toFixed(2);
     console.log(typeof swt)
     setStrikeWaterTemp(swt)
   }
